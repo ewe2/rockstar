@@ -1,0 +1,7 @@
+language: python
+python:
+  - "3.6"
+script:
+  - mypy src/ --config-file=mypy.ini
+  - pylint src/ --rcfile=.pylintrc
+  - python tests.py --ignore tests/parse-errors/invalidPoeticLiteralAssignment.rock
